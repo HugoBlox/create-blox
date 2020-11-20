@@ -24,6 +24,16 @@ _[**Wowchemy**](https://wowchemy.com) makes it easy to create a beautiful websit
    - You can access page and section (widget instance) variables using `$page` and `$section`, respectively
    - Check out the [built-in widgets](https://github.com/wowchemy/wowchemy-hugo-modules/tree/master/wowchemy/layouts/partials/widgets) for inspiration
 
+### Example
+
+Say your GitHub username is `pikachu` and you wish to create a widget named `pokemon`:
+
+1. We click _Use This Template_ and enter `wowchemy-widget-pokemon` as the project name
+1. We replace the first line of `go.mod` with `module github.com/pikachu/wowchemy-widget-pokemon`
+1. We browse to the `layouts/partials/widgets/` folder, and rename `my-widget.html` to `github.pikachu.pokemon.html`
+1. We customize the HTML in `github.pikachu.pokemon.html`
+1. We add the widget to our site and share the widget with the community following the guide below
+
 ## 🌈 Add the Widget to your Site
 
 1. Install your widget in your site by referencing it at the bottom of your `config/_defaults/config.toml`:
