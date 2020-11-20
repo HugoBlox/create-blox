@@ -12,10 +12,11 @@ _[**Wowchemy**](https://wowchemy.com) makes it easy to create a beautiful websit
 ## 🧑‍🎨 Create a Widget
 
 1. Click the [_Use This Template_](https://github.com/wowchemy/wowchemy-widget-starter/generate) button on GitHub
-   1. Name your repository `wowchemy-widget-<WIDGET-NAME>` where <WIDGET-NAME> is an appropriate name for your widget
-1. Browse your new GitHub project, click the  `go.mod` file, and then the pencil button to edit it
+   1. Name your repository `wowchemy-widget-<WIDGET-NAME>` where `<WIDGET-NAME>` is an appropriate name for your widget
+1. Browse your new GitHub project, click the  `go.mod` file, and then the ✏️ pencil button to edit it
    1. Replace the placeholder URL in `go.mod` with your new GitHub URL in the form `module github.com/<USERNAME>/wowchemy-widget-<WIDGET-NAME>` where `<USERNAME>` is your GitHub username and `<WIDGET-NAME>` is the name of the widget
-1. Rename `my-widget.html` in the `layouts/partials/widgets/` folder to give it a unique ID in the form `github.<USERNAME>.<WIDGET-NAME>.html`, again replacing  `<USERNAME>` with your GitHub username and `<WIDGET-NAME>` with your widget name
+1. Browse to the `layouts/partials/widgets/` folder, click `my-widget.html`, and click the ✏️ pencil button to edit it
+   - Rename `my-widget.html` in the text box to a unique ID in the form `github.<USERNAME>.<WIDGET-NAME>.html`, again replacing  `<USERNAME>` with your GitHub username and `<WIDGET-NAME>` with your widget name, and then scroll to the bottom and click _Commit Changes_ to save
 1. Edit the HTML for your new widget
    - You may use [Go Templating](https://gohugo.io/templates/introduction/) and [Bootstrap](https://getbootstrap.com/docs/4.5/layout/grid/) layouts
    - You can access page and section (widget instance) variables using `$page` and `$section`, respectively
