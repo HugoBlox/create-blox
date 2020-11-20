@@ -58,4 +58,4 @@ _[**Wowchemy**](https://wowchemy.com) makes it easy to create a beautiful websit
 
 ## 📢 Share your widget
 
-Share your widget with the community on [Discord](https://discord.gg/z8wNYzb) and [Twitter]().
+Share your widget with the community on [Discord](https://discord.gg/z8wNYzb) and [Twitter](https://twitter.com/intent/tweet?text=I%27m%20creating%20a%20beautiful%20website%20widget%20using%20the%20free%20%E2%9D%A4%EF%B8%8F%2C%20open%20source%20%40wowchemy%20Website%20Builder%20for%20%40GoHugoIO%20by%20%40GeorgeCushen%20%E2%9C%A8%20Have%20some%20feedback%3F%20Please%20comment%20%F0%9F%A4%97&hashtags=MadeWithWowchemy&url=https://wowchemy.com/).
