@@ -36,17 +36,12 @@ Say your GitHub username is `pikachu` and you wish to create a widget named `pok
 
 ## 🌈 Add the Widget to your Site
 
-1. Install your widget in your site by referencing it at the bottom of your `config/_defaults/config.toml`:
-   ```toml
-   # At the bottom of your `config.toml` is a Module section:
-   [module]
-
-     # Your existing modules will appear here.
-
-     # Add your widget's GitHub URL below.
-     # Replace <USERNAME> and <WIDGET-NAME> with your GitHub username and widget name, respectively.
-     [[module.imports]]
-       path = "github.com/<USERNAME>/wowchemy-widget-<WIDGET-NAME>"
+1. Install the widget by referencing it in your `config/_defaults/config.yaml`:
+   ```yaml
+   module:
+     imports:
+       # Your widget's GitHub URL (replace <USERNAME> and <WIDGET-NAME> with your GitHub username and widget name)
+       - path: github.com/<USERNAME>/wowchemy-widget-<WIDGET-NAME>
    ```
 1. Create an instance of your widget in `home/`, for example let's create `home/my-widget.md`:
    ```markdown
@@ -67,5 +62,7 @@ Say your GitHub username is `pikachu` and you wish to create a widget named `pok
    ```
 
 ## 📢 Share your widget
+
+Add the [wowchemy-hugo-extension](https://github.com/topics/wowchemy-hugo-extension) tag to your widget's GitHub repository to help other users find it.
 
 Share your widget with the community on [Discord](https://discord.gg/z8wNYzb) and [Twitter](https://twitter.com/intent/tweet?text=I%27m%20creating%20a%20beautiful%20website%20widget%20using%20the%20free%20%E2%9D%A4%EF%B8%8F%2C%20open%20source%20%40wowchemy%20Website%20Builder%20for%20%40GoHugoIO%20by%20%40GeorgeCushen%20%E2%9C%A8%20Have%20some%20feedback%3F%20Please%20comment%20%F0%9F%A4%97&hashtags=MadeWithWowchemy&url=https://wowchemy.com/).
