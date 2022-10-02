@@ -1,6 +1,6 @@
-{{ $page := .root }}
-{{ $section := .page }}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
 
-<h2>{{$section.Title}}</h2>
+<h2>{{$block.Title}}</h2>
 
-<p>{{$section.Content}}</p>
+<p>{{$block.Content}}</p>
