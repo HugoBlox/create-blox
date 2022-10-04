@@ -1,0 +1,14 @@
+{{/* My Custom Block */}}
+
+{{/* Get variables */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{/* Add your block layout below */}}
+{{/* Styles can be added to the SCSS file */}}
+{{/* Access custom front matter options via $block.Params  */}}
+{{/* E.g. mytext via $block.Params.mytext */}}
+
+<h2>{{$block.Title}}</h2>
+
+<p>{{$block.Content}}</p>

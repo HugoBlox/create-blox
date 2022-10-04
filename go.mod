@@ -1,3 +1,3 @@
-module github.com/wowchemy/wowchemy-widget-starter
+module github.com/wowchemy/wowchemy-block-starter
 
-go 1.15
+go 1.19

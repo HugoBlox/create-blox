@@ -1,4 +1,8 @@
 module:
   mounts:
-    - source: layouts
-      target: layouts
+    - source: blocks
+      target: layouts/partials/blocks/
+      includeFiles: '**.html'
+    - source: blocks
+      target: assets/scss/blocks/
+      includeFiles: '**.scss'

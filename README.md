@@ -12,16 +12,17 @@ _[**Wowchemy**](https://wowchemy.com) makes it easy to create a beautiful websit
 ## 🧑‍🎨 Create a Block
 
 1. Click the [_Use This Template_](https://github.com/wowchemy/wowchemy-block-starter/generate) button on GitHub
-   1. Name your repository `wowchemy-widget-<BLOCK-NAME>` where `<BLOCK-NAME>` is an appropriate name for your block
+   1. Name your repository with an appropriate name for your block collection, such as `alices-wowchemy-blocks`
 1. Browse your new GitHub project, click the  `go.mod` file, and then the ✏️ pencil button to edit it
-   1. Replace the placeholder URL in `go.mod` with your new GitHub URL in the form `module github.com/<USERNAME>/wowchemy-block-<BLOCK-NAME>` where `<USERNAME>` is your GitHub username and `<BLOCK-NAME>` is the name of the block
+   1. Replace the placeholder URL in `go.mod` with your new GitHub URL in the form `module github.com/<USERNAME>/<COLLECTION-NAME>` where `<USERNAME>` is your GitHub username and `<COLLECTION-NAME>` is a name for your collection of blocks
    1. Scroll to the bottom and click _Commit Changes_ to save
-1. Browse to the `layouts/partials/blocks/` folder, click `my-block.html`, and click the ✏️ pencil button to edit it
-   1. Rename `my-block.html` in the text box to a unique ID in the form `github.<USERNAME>.<BLOCK-NAME>.html`, again replacing  `<USERNAME>` with your GitHub username and `<BLOCK-NAME>` with your block name
+1. Browse to the `blocks/` folder, click `my-block.html`, and click the ✏️ pencil button to edit it
+   1. Rename `my-block.html` in the text box to a unique ID in the form `github.<USERNAME>.<BLOCK-NAME>.html`, again replacing  `<USERNAME>` with your GitHub username and `<BLOCK-NAME>` with your block name. It's important to provide this **globally unique block name**, otherwise another block can conflict with your block.
+   1. Repeat the above step to rename the style file, `my-block.scss`
    1. Scroll to the bottom and click _Commit Changes_ to save
 1. Edit the HTML for your new block
    - You may use [Go Templating](https://gohugo.io/templates/introduction/) and [Bootstrap](https://getbootstrap.com/docs/4.5/layout/grid/) layouts
-   - You can access page and section (block instance) variables using `$page` and `$section`, respectively
+   - You can access page and block (page section) variables using `$page` and `$block`, respectively
    - Check out the [built-in blocks](https://github.com/wowchemy/wowchemy-hugo-themes/tree/main/modules/wowchemy/layouts/partials/blocks) for inspiration
 
 ### Example
@@ -30,8 +31,9 @@ Say your GitHub username is `pikachu` and you wish to create a block named `poke
 
 1. We click _Use This Template_ and enter `wowchemy-block-pokemon` as the project name
 1. We replace the first line of `go.mod` with `module github.com/pikachu/wowchemy-block-pokemon`
-1. We browse to the `layouts/partials/blocks/` folder, and rename `my-block.html` to `github.pikachu.pokemon.html`
-1. We customize the HTML in `github.pikachu.pokemon.html`
+1. We browse to the `blocks/` folder, and rename `my-block.html` to `github.pikachu.pokemon.html`
+1. We rename rename `my-block.scss` to `github.pikachu.pokemon.scss`
+1. We customize the HTML in `github.pikachu.pokemon.html` and the style in `github.pikachu.pokemon.scss`
 1. We add the block to our site and share the block with the community following the guide below
 
 ## 🌈 Add the Block to your Site
@@ -40,8 +42,8 @@ Say your GitHub username is `pikachu` and you wish to create a block named `poke
    ```yaml
    module:
      imports:
-       # Your block's GitHub URL (replace <USERNAME> and <BLOCK-NAME> with your GitHub username and block name)
-       - path: github.com/<USERNAME>/wowchemy-block-<BLOCK-NAME>
+       # Your block's GitHub URL (replace <USERNAME> and <COLLECTION-NAME> with your GitHub username and block collection name)
+       - path: github.com/<USERNAME>/wowchemy-block-<COLLECTION-NAME>
    ```
 1. Create an instance of your block in `home/`, for example let's create `home/my-block.md`:
    ```markdown
