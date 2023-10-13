@@ -6,9 +6,13 @@
 
 {{/* Add your block layout below */}}
 {{/* Styles can be added to the SCSS file */}}
-{{/* Access custom front matter options via $block.Params  */}}
-{{/* E.g. mytext via $block.Params.mytext */}}
+{{/* Access custom front matter options via `$block.content`  */}}
+{{/* E.g. Access a `mytext` field via `$block.content.mytext` */}}
 
-<h2>{{$block.Title}}</h2>
+{{/* Parse the fields as Markdown with Hugo's `RenderString` */}}
+{{ $title := $block.content.text | emojify | $page.RenderString }}
+{{ $text := $block.content.text | emojify | $page.RenderString }}
 
-<p>{{$block.Content}}</p>
+<h2>{{$title}}</h2>
+
+<p>{{$text}}</p>
