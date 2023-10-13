@@ -45,22 +45,20 @@ Say your GitHub username is `pikachu` and you wish to create a block named `poke
        # Your block's GitHub URL (replace <USERNAME> and <COLLECTION-NAME> with your GitHub username and block collection name)
        - path: github.com/<USERNAME>/wowchemy-block-<COLLECTION-NAME>
    ```
-1. Create an instance of your block in `home/`, for example let's create `home/my-block.md`:
+1. Add the block to a page such as your homepage at `content/_index.md`:
    ```markdown
    ---
-   # Replace <USERNAME> and <BLOCK-NAME> with your GitHub username and block name, respectively.
-   widget: 'github.<USERNAME>.<BLOCK-NAME>'
-
-   # This file represents a page section.
-   headless: true
-
-   # Order that this section appears on the page.
-   weight: 1
-
-   title: Hello
+   title: My page
+   type: landing
+   
+   # Replace <USERNAME> and <BLOCK-NAME> with the GitHub username that published the block and the block name, respectively.
+   # For example, `github.com/pikachu/wowchemy-block-pokemon` would be referenced as `block: github.pikachu.pokemon`
+   sections:
+     - block: 'github.<USERNAME>.<BLOCK-NAME>'
+       content:
+         title: My title
+         text: Add any **markdown** formatted content here - text, images, videos, galleries - and even HTML code!
    ---
-
-   Welcome to my new block!
    ```
 
 ## 📢 Share your block
