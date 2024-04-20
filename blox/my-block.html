@@ -1,0 +1,26 @@
+{{/* My Custom Hugo Blox */}}
+{{/* https://hugoblox.com */}}
+
+{{/* Initialise the block */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{/* Your Hugo variables */}}
+{{ $title := $block.content.title | emojify | $page.RenderString }}
+{{ $text := $block.content.text | emojify | $page.RenderString }}
+
+{{/* Add your block layout below */}}
+{{/* Styles can be added to the CSS file */}}
+{{/* Access custom front matter options via $block.content */}}
+{{/* E.g. a field named `text` via $block.content.text */}}
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    {{ $title }}
+  </div>
+
+  {{ with $text }}
+    <p class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose">{{ . }}</p>
+  {{ end }}
+</div>

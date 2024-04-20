@@ -1,8 +1,8 @@
 module:
   mounts:
-    - source: blocks
-      target: layouts/partials/blocks/
+    - source: blox
+      target: layouts/partials/blox/community/
       includeFiles: '**.html'
-    - source: blocks
-      target: assets/scss/blocks/
-      includeFiles: '**.scss'
+    - source: blox
+      target: assets/dist/community/blox/
+      includeFiles: '**.css'
