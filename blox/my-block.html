@@ -6,13 +6,17 @@
 {{ $block := .wcBlock }}
 
 {{/* Your Hugo variables */}}
-{{ $title := $block.content.title | emojify | $page.RenderString }}
-{{ $text := $block.content.text | emojify | $page.RenderString }}
+{{/* Access custom front matter content via `$block.content`. */}}
+{{/* E.g. access a `title` field via `$block.content.title`. */}}
+{{/* Pipe the field to `$page.RenderString` to parse it as Markdown. */}}
+{{ $title := $block.content.title | $page.RenderString }}
+{{ $text := $block.content.text | $page.RenderString }}
 
 {{/* Add your block layout below */}}
-{{/* Styles can be added to the CSS file */}}
-{{/* Access custom front matter options via $block.content */}}
-{{/* E.g. a field named `text` via $block.content.text */}}
+{{/* Styles (in the form of vanilla CSS) can be added to the CSS file. */}}
+{{/* Tailwind styles can optionally be used with the extra step of compiling Tailwind. */}}
+{{/* Access custom front matter design options via `$block.design`. */}}
+{{/* E.g. access a `show_title` field via `$block.design.show_title`. */}}
 
 <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
 
